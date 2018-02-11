@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Project 1</title>
+
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+	<!-- css file -->
+	<link rel="stylesheet" href="project1.css">
+
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+	<!--Put your D3 import statement between these two lines-->
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+	<!--Put your D3 import statement between these two lines-->
+</head>
+
+<body>
+	<div class="container bg-light" id="shell">
+		<div class="jumbotron bg-dark">
+			<h1 class="text-center text-warning">PROJECT 1</h1>
+			<div class="row">
+				<p class="col text-center text-light">INFO-4602/5602</p>
+				<p class="col text-center text-light">Wei Miao</p>
+				<p class="col text-center text-light">Feb 10, 2018</p>
+			</div>
+		</div>
+
+
+		<div id="partOne">
+			<h2 class="text-light bg-dark">Part One </h2>
+		</div>
+
+		<div id="partTwo">
+			<h2 class="text-light bg-dark">Part Two </h2>
+			<!-- drwopdown list to select dataset -->
+			<select class="border border-info mt-2 mb-3" id="dataSelect" onchange="changeDateset()">
+  			<option value="anscombe_I.csv" selected>anscombe_I.csv</option>
+  			<option value="anscombe_II.csv">anscombe_II.csv</option>
+  			<option value="anscombe_III.csv">anscombe_III.csv</option>
+  			<option value="anscombe_IV.csv">anscombe_IV.csv</option>
+			</select>
+
+			<div id="scatterplots">
+			</div>
+			<div class="row mt-5">
+				<div class="col" id="xBar">
+					<h3 class="text-center">Anscombe_I X</h3>
+				</div>
+				<div class="col" id="yBar">
+					<h3 class="text-center">Anscombe_I Y</h3>
+				</div>
+			</div>
+		</div>
+
+		<div id="partThree">
+			<h2 class="text-light bg-dark">Part Three &amp; Four </h2>
+			<div id="lineGraphs">
+				<h4 class="text-center" id="lineGraphsLabel">X: --, Y: -- </h4>
+			</div>
+		</div>
+
+		<div id="partFive">
+			<h2 class="text-light bg-dark">Part Five</h2>
+			<div class="container" id="scatterplotSet">
+				<div class="row">
+					<div class="col" id="scp1">
+						<h3 class="text-center">Anscombe_I</h3>
+					</div>
+					<div class="col" id="scp2">
+						<h3 class="text-center">Anscombe_II</h3>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col" id="scp3">
+						<h3 class="text-center">Anscombe_III</h3>
+					</div>
+					<div class="col" id="scp4">
+						<h3 class="text-center">Anscombe_IV</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>
